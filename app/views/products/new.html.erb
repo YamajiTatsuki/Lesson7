@@ -1,0 +1,9 @@
+<%= form_for @p, url: {action: :create} do |product| %>
+    <%= product.label :name, '商品名'%>
+    <%= product.text_field :name %>
+    </br>
+    <%= product.label :price, '値段' %>
+    <%= product.number_field :price, min: "1", value: "0"%>
+    <%= product.submit '登録' %>
+<% end %>
+<%= link_to '戻る', products_path %>

@@ -1,0 +1,10 @@
+<h1>商品リスト</h1>
+<% @pdts.each do |p| %>
+<p>商品名: <%= p.name%></p>
+<p>価格: <%= p.price %>円</p>   
+    <%= link_to '削除', product_path(p.id), method: :delete %>
+    <br />
+    <br />
+<% end %>
+<%= link_to '追加', new_product_path %>
+<%= link_to '戻る', top_main_path %>
